@@ -1,0 +1,74 @@
+<<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flores Amarillas</title>
+  <style>
+    /* Fondo elegido para que la imagen no tenga cambio visible */
+    :root{
+      --bg-color: #f3d6b1; /* tono crema/peach — cámbialo si quieres afinarlo */
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background-color: var(--bg-color);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Centrado perfecto y adaptativo */
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      box-sizing:border-box;
+    }
+
+    /* Estilo de la "tarjeta" que contiene la imagen para mantener el mismo fondo,
+       sin bordes visibles que rompan la continuidad. */
+    .card{
+      background: transparent;
+      display:inline-block;
+      text-align:center;
+      max-width: 100%;
+    }
+
+    /* Imagen responsive, mantiene proporciones y se centra */
+    .card img{
+      display:block;
+      max-width: 600px; /* límite visual — cámbialo */
+      width: 90vw; /* ocupa hasta 90% del ancho en pantallas pequeñas */
+      height: auto;
+      margin: 0 auto;
+      image-rendering: auto;
+      /* Si la imagen tiene borde blanco alrededor, intenta ocultarlo con box-shadow inset del mismo color:
+         box-shadow: inset 0 0 0 10px var(--bg-color);
+         (Descomenta si es necesario)
+      */
+    }
+
+    /* Si quieres texto debajo (opcional), descomenta/usa este bloque */
+    /*
+    .caption{
+      margin-top:12px;
+      color:#8b5e2b;
+      font-size:16px;
+    }
+    */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="img" aria-label="Gatito con flores amarillas">
+      <!-- Cambia el nombre del archivo si guardaste la imagen con otro nombre -->
+      <img src="gato.jpg" alt="Gatito sosteniendo flores amarillas" />
+      <!-- <div class="caption">Para que no te quedes sin tus flores amarillas preciosa</div> -->
+    </div>
+  </div>
+</body>
+</html>
